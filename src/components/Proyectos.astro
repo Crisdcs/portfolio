@@ -1,0 +1,160 @@
+---
+import {Button} from "@/components/ui/button"
+import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "./ui/card";
+import {Github} from "lucide-react";
+---
+
+<Card>
+    <CardHeader>
+        <CardTitle>Library Sys</CardTitle>
+        <CardDescription>
+            <Button variant={"laravel"}>Laravel</Button>
+            <Button variant="vue">Vue</Button>
+            <Button variant="typescript">TypeScript</Button>
+        </CardDescription>
+    </CardHeader>
+    <CardContent>
+        <div class="flex w-full h-16 overflow-y-scroll mb-2 scrollbar-thin scrollbar-thumb-white scrollbar-track-[#172564] dark:scrollbar-thumb-zinc-950 dark:scrollbar-track-zinc-700">
+            <p class="text-justify pr-3 pl-3 select-none">
+                A este sistema de biblioteca lo desarrollé en 2 partes, comunicándolos a través de API REST, por un lado el backend
+                con Laravel con el que se creó un sistema de login encriptando y hasheando el password y el id, se
+                implementó seguridad JWT, rutas protegidas con middlewares, del lado del frontend con VueJS se crearon las vistas
+                para iniciar sesión y crear una cuenta, además de trabajar con PiniaJS para mantener el estado global para evitar
+                carga de memoria innecesaria. Las funciones que se utilizaron en front se desarrollaron con TS. Este proyecto es
+                escalable para futuras actualizaciones.
+            </p>
+        </div>
+        <div class="flex justify-center">
+            <div class="flex gap-2 w-full h-52 overflow-x-scroll scroll-smooth scroll-snap-x mandatory scrollbar-thin scrollbar-thumb-white scrollbar-track-[#172564] dark:scrollbar-thumb-zinc-950 dark:scrollbar-track-zinc-700">
+                <div class="item">
+                    <img src="../../src/assets/img/l1.png" alt="" class="h-full"/>
+                </div>
+                <div class="item">
+                    <img src="../../src/assets/img/l2.png" alt="" class="h-full" />
+                </div>
+                <div class="item">
+                    <img src="../../src/assets/img/l3.png" alt="" class="h-full"/>
+                </div>
+                <div class="item">
+                    <img src="../../src/assets/img/l4.png" alt="" class="h-full"/>
+                </div>
+            </div>
+        </div>
+    </CardContent>
+    <CardFooter>
+        <a href="https://github.com/CristianDCS0/Library_Laravel">
+            <Button variant='laravel'> Backend<Github /></Button>
+        </a>
+        <a href="https://github.com/CristianDCS0/Library_Vue">
+            <Button variant='vue'> Frontend <Github /> </Button>
+        </a>
+    </CardFooter>
+</Card>
+
+<Card>
+    <CardHeader>
+        <CardTitle>Shop Sys</CardTitle>
+        <CardDescription>
+            <Button className="cursor-default">
+                Express
+            </Button>
+            <Button variant="react">
+                React
+            </Button>
+            <Button variant="typescript">
+                TypeScript
+            </Button>
+        </CardDescription>
+    </CardHeader>
+    <CardContent>
+        <div class="flex w-full h-16 overflow-y-scroll mb-2 scrollbar-thin scrollbar-thumb-white scrollbar-track-[#172564] dark:scrollbar-thumb-zinc-950 dark:scrollbar-track-zinc-700">
+            <p class="text-justify pr-3 pl-3 select-none">
+                Este proyecto lo basé en una tienda, lo desarrollé en 2 partes, en la parte del backend lo creé con ExpressJS, el cual
+                configuré desde cero, el cual es totalmente escalable ya que no estática, creé API's para poder comunicarlo con el
+                Frontend, que desarrollé con React, creé un login y un registro de usuario con filtro de roles, e intregré Redux Toolkit
+                para el manejo de estado, pensado en un ecommerce, las funciones a través de TypeScript.
+            </p>
+        </div>
+        <div class="flex justify-center">
+            <div class="flex gap-2 w-full h-52 overflow-x-scroll scroll-smooth scroll-snap-x mandatory scrollbar-thin scrollbar-thumb-white scrollbar-track-[#172564] dark:scrollbar-thumb-zinc-950 dark:scrollbar-track-zinc-700">
+                <div class="item">
+                    <img src="../../src/assets/img/e1.png" alt="" class="h-full"/>
+                </div>
+                <div class="item">
+                    <img src="../../src/assets/img/e2.png" alt="" class="h-full"/>
+                </div>
+            </div>
+        </div>
+    </CardContent>
+    <CardFooter>
+        <a href="https://github.com/CristianDCS0/Shop_Express">
+            <Button variant='default'> Backend<Github /> </Button>
+        </a>
+        <a href="https://github.com/CristianDCS0/Shop_React">
+            <Button variant='react' className="cursor-pointer"> Frontend<Github /> </Button>
+        </a>
+    </CardFooter>
+</Card>
+
+<Card>
+    <CardHeader>
+        <CardTitle>Laravel + Inertia (Vue)</CardTitle>
+        <CardDescription>
+            <Button variant="laravel">
+                Laravel
+            </Button>
+            <Button variant="inertia">
+                Intertia
+            </Button>
+            <Button variant="vue">
+                Vue
+            </Button>
+            <Button variant="typescript">
+                TypeScript
+            </Button>
+        </CardDescription>
+    </CardHeader>
+    <CardContent>
+        <p>Card Content</p>
+    </CardContent>
+    <CardFooter>
+        <Button variant="secondary">
+            <a href="#">
+                <Github />
+            </a>
+        </Button>
+    </CardFooter>
+</Card>
+
+<Card>
+    <CardHeader>
+        <CardTitle>Laravel Open Admin</CardTitle>
+        <CardDescription>
+            <Button variant={"laravel"}>Laravel</Button>
+        </CardDescription>
+    </CardHeader>
+    <CardContent>
+
+    </CardContent>
+    <CardFooter>
+        <Button variant="secondary">
+            <a href="#">
+                <Github />
+            </a>
+        </Button>
+    </CardFooter>
+</Card>
+
+<style>
+    .item {
+        flex: 0 0 auto; /* Evita que los elementos se encojan o crezcan */
+        width: 100%; /* Ancho del elemento del carrusel */
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        scroll-snap-align: center; /* Centra cada elemento al detenerse */
+        padding-bottom: 10px;
+        transition: transform 0.59s ease, z-index 0.59s ease
+    }
+</style>
