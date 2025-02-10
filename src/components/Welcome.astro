@@ -3,6 +3,7 @@ import React from "react"
 import {Button} from "@/components/ui/button"
 import {ModeToggle} from "@components/ui/ModeToggle";
 import Proyectos from "./Proyectos.astro";
+import {QrCode} from "lucide-react"
 ---
 
 <div>
@@ -53,6 +54,9 @@ import Proyectos from "./Proyectos.astro";
         <div class="grid justify-center border-r-2 gap-2">
             <Button variant="vue">
                 WhatsApp: +52 8119020538
+                <a href="https://wa.me/qr/OOPMKKNGJABUD1">
+                    <QrCode/>
+                </a>
             </Button>
             <Button variant="laravel">
                 Gmail: cdcs030600@gmail.com
