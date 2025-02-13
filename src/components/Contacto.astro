@@ -1,0 +1,30 @@
+---
+
+import {Button} from "./ui/button";
+import {QrCode} from "lucide-react";
+---
+<div class="bg-blue-900 text-zinc-50 dark:bg-zinc-800 dark:text-zinc-300 text-2xl text-center" id="Contacto">
+    <p class="animate-pulse pt-10 pb-8 font-code">< Contacto / ></p>
+</div>
+<div class="bg-blue-900 text-zinc-50 dark:bg-zinc-800 p-5 items-center">
+    <div class="grid grid-cols-2">
+        <div class="grid justify-center border-r-2 gap-2">
+            2025 &copy; Cristian Cobaxin
+            <Button variant="vue">
+                WhatsApp: +52 8119020538
+                <a href="https://wa.me/qr/OOPMKKNGJABUD1">
+                    <QrCode/>
+                </a>
+            </Button>
+            <Button variant="laravel">
+                Gmail: cdcs030600@gmail.com
+            </Button>
+            <Button className="cursor-default">
+                Github: https://github.com/CristianDCS0
+            </Button>
+        </div>
+        <div class="flex justify-center">
+            Dirección: Guadalupe, N.L., México
+        </div>
+    </div>
+</div>

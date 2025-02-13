@@ -4,6 +4,10 @@ export default {
     content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
     	extend: {
+			fontFamily: {
+				consola: ['Fira Code', 'monospace'],
+				code: ['JetBrains Mono', 'monospace']
+			},
     		borderRadius: {
     			lg: 'var(--radius)',
     			md: 'calc(var(--radius) - 2px)',

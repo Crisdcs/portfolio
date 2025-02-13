@@ -1,100 +1,22 @@
 ---
-import React from "react"
-import {Button} from "@/components/ui/button"
-import {ModeToggle} from "@components/ui/ModeToggle";
 import Proyectos from "./Proyectos.astro";
-import {QrCode} from "lucide-react"
+import Portada from "./Portada.astro";
+import Contacto from "./Contacto.astro";
+import Menu from "./Menu.astro";
+import Experiencia from "./Experiencia.astro";
+import Aboutme from "./Aboutme.astro";
 ---
 
 <div>
-    <div class="sticky top-2 m-3">
-        <div class="grid grid-cols-2">
-            <div class="w-fit backdrop-blur-sm bg-white/10 rounded-xl p-2">
-                <ModeToggle client:load />
-            </div>
-            <div class="flex justify-end">
-                <div class="w-fit backdrop-blur-sm bg-white/10 rounded-xl p-2">
-                    <a href="#contacto">
-                        <Button>Contacto</Button>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
+    <Menu/>
 
-    <div class="flex justify-center mt-10 sm:mt-3 select-none">
-        <div class="text-6xl sm:text-8xl content-center backdrop-blur-sm bg-white/10 rounded-3xl">
-            👨🏾‍💻
-        </div>
-        <div class="col-start-2 grid-rows-2 w-min">
-            <div class="flex p-2">
-                <pre>Hola</pre><div class="text-6xl animate-pulse">👋🏾</div><pre>, bienvenid@</pre>
-            </div>
-            <div class="p-2">
-                <p>
-                    Mi nombre es Cristian Cobaxin, soy desarrollador de software. Tengo 24 años de edad.
-                    Actualmente estoy en mi ultimo año de ingeniería en desarrollo de software y redes.
-                    <br/>
-                    Tengo 1 y medio de experiencia profesional como desarrollador, más 2 años con proyectos
-                    personales principalmente en el backend con php y java, aunque también tengo
-                    conocimientos en el frontend con JS y frameworks como Vue, React y en diseño con Tailwind.
-                    <br/>
-                    Soy una persona muy autodidacta, tengo facilidades de aprendizaje rápido, me gustan los restos.
-                    Soy responsable y comprometido.
-                </p>
-            </div>
-        </div>
-    </div>
+    <Portada/>
 
-    <div class="grid grid-cols-2 grid-flow-row gap-5 p-5 mb-10">
-        <Proyectos />
-    </div>
+    <Experiencia/>
 
-    <div class="grid grid-cols-2 text-white backdrop-blur-xl bg-blue-950/20 dark:bg-zinc-950/10 rounded-xl p-5 items-center" id="contacto">
-        <div class="grid justify-center border-r-2 gap-2">
-            <Button variant="vue">
-                WhatsApp: +52 8119020538
-                <a href="https://wa.me/qr/OOPMKKNGJABUD1">
-                    <QrCode/>
-                </a>
-            </Button>
-            <Button variant="laravel">
-                Gmail: cdcs030600@gmail.com
-            </Button>
-            <Button className="cursor-default">
-                Github: https://github.com/CristianDCS0
-            </Button>
-        </div>
-        <div class="flex justify-center">
-            Dirección: Guadalupe, N.L., México
-        </div>
-    </div>
+    <Proyectos />
+
+    <Aboutme/>
+
+    <Contacto/>
 </div>
-
-<div class="sticky bottom-0 flex justify-end">
-   <div class="backdrop-blur-xl bg-white/10 rounded-xl w-fit p-2 m-3 text-zinc-950/60 dark:text-zinc-50/50 text-sm">
-      2025 &copy; Cristian Cobaxin, hecho con Astro JS
-   </div>
-</div>
-
-<style>
-	pre {
-		font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
-		font-weight: normal;
-		font-size: 50px;
-		background: linear-gradient(14deg, #f041ff 0%, #245ad7 100%);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-clip: text;
-		margin: 0;
-	}
-
-	p {
-		color: #d7d7d7;
-		font-size: 15px;
-		line-height: 24px;
-		letter-spacing: -0.006em;
-		margin: 0;
-        text-align: justify;
-	}
-</style>

@@ -1,0 +1,29 @@
+---
+import {Button} from "../ui/button";
+import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "../ui/card";
+import {Github} from "lucide-react";
+---
+<Card>
+    <CardHeader>
+        <CardTitle>Almacén de productos</CardTitle>
+        <CardDescription>
+            <p class="text-sm">
+                Es un sistema <span class="text-stone-950 font-semibold">Backend</span> de
+                <span class="text-stone-950 font-semibold">micro-servicios</span> hecho con
+                <span class="text-green-500 font-semibold">Spring Boot</span>,
+                contiene autenticación JWT y autorización, configuración centralizada,
+                circuit breaker, API REST, API gateway, ...
+            </p>
+        </CardDescription>
+    </CardHeader>
+    <CardContent>
+        <div class="flex justify-center">
+            <img src="/portfolio/p1.png" alt="" class="h-32"/>
+        </div>
+    </CardContent>
+    <CardFooter>
+        <a href="https://github.com/CristianDCS0/Library_Laravel">
+            <Button variant='default'>Repositorio<Github /></Button>
+        </a>
+    </CardFooter>
+</Card>
