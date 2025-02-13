@@ -65,7 +65,7 @@
   pre {
     font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
     font-weight: normal;
-    font-size: 50px;
+    font-size: 40px;
     background: linear-gradient(14deg, rgba(36, 90, 215, 0.66) 0%, #f8e9e9 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

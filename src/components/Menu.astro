@@ -1,12 +1,15 @@
 ---
 import {ModeToggle} from "./ui/ModeToggle";
 ---
-<div class="sticky top-0 bg-zinc-50 sm:h-screen dark:bg-zinc-900 dark:text-zinc-50">
-    <div class="h-12 grid grid-cols-4 items-center">
-        <div class="font-sans text-[13px] content-center pl-5 select-none">
-            Cristian Cobaxin
+<div class="sticky top-0 h-14 bg-zinc-50 content-center dark:bg-zinc-900 dark:text-zinc-50">
+    <div class="grid grid-cols-4">
+        <div class="col-start-1 grid justify-start ml-5">
+            <p class="grid content-center font-sans text-[13px] select-none text-center">
+                Cristian Cobaxin
+            </p>
         </div>
-        <div class="col-start-2 col-span-2 grid justify-items-end mr-20">
+
+        <div class="col-start-2 col-span-2 grid justify-center">
             <nav>
                 <ul class="flex list-none">
                     <li class="dark:hover:bg-zinc-500 dark:hover:text-zinc-900">
@@ -27,7 +30,8 @@ import {ModeToggle} from "./ui/ModeToggle";
                 </ul>
             </nav>
         </div>
-        <div class="col-start-4 grid justify-items-end mr-5">
+
+        <div class="col-start-4 grid justify-end mr-5">
             <ModeToggle client:load />
         </div>
     </div>

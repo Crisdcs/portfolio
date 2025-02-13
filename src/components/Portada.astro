@@ -2,36 +2,38 @@
 import {Button} from "./ui/button";
 import {Archive} from "lucide-react"
 ---
-<div class="bg-blue-900 h-screen pl-20 pr-20 flex justify-center select-none dark:bg-zinc-800" id="inicio">
-    <div>
-        <div class="text-8xl content-center">
+<div class="bg-blue-900 h-screen grid content-center dark:bg-zinc-800" id="inicio">
+    <div class="grid grid-cols-3">
+        <div class="col-start-1 text-8xl content-center grid justify-end">
             👨🏾‍💻
         </div>
-        <div class="w-min content-center">
-            <div class="flex p-2">
-                <pre>Hola</pre><div class="text-6xl animate-pulse">👋🏻</div><pre>, bienvenid@</pre>
-            </div>
-            <div class="p-2">
-                <p class="text-zinc-50 font-sans">
-                    Mi nombre es <span class="text-green-500 font-semibold"> Cristian Cobaxin </span>,
-                    soy desarrollador de software. Tengo 24 años de edad. Actualmente estoy en mi
-                    ultimo año de ingeniería en desarrollo de software y redes, busco experiencia laboral.
-                    <br/>
-                    Desarrollador backend en Laravel y Java. Tengo <span class="text-green-500 font-semibold">un año y medio de experiencia
-                laboral</span> más 2 años desarrollando proyectos personales.
-                </p>
-                <div class="flex gap-2 mt-3">
+        <div class="col-start-2 col-span-2 w-[550px] pl-7">
+            <div class="content-center">
+                <div class="flex gap-2">
+                    <pre>Hola</pre><div class="text-5xl animate-pulse">👋🏻</div><pre>, bienvenid@</pre>
+                </div>
+                <div class="mt-4 mb-4">
+                    <p class="text-zinc-50 font-sans">
+                        Mi nombre es <span class="text-green-500 font-semibold"> Cristian Cobaxin </span>,
+                        soy desarrollador de software. Tengo 24 años de edad. Actualmente estoy en mi
+                        ultimo año de ingeniería en desarrollo de software y redes, busco experiencia laboral.
+                        <br/>
+                        Desarrollador backend en Laravel y Java. Tengo <span class="text-green-500 font-semibold">
+                        un año y medio de experiencia laboral</span> más 2 años desarrollando proyectos personales.
+                    </p>
+                </div>
+                <div class="flex gap-2">
                     <img src="/portfolio/icons8-java-120.png" alt="java" class="h-8 w-8 p-1 rounded-md bg-zinc-100/50"/>
                     <img src="/portfolio/icons8-laravel-16.png" alt="js" class="h-8 w-8 p-1 rounded-md bg-zinc-100/50"/>
                 </div>
             </div>
-            <div class="flex justify-center">
-                <a href="/portfolio/cv-cdcs.pdf" download="cv.pdf">
-                    <Button className="content-center bg-blue-950">
-                        <Archive/> Descargar CV
-                    </Button>
-                </a>
-            </div>
         </div>
+    </div>
+    <div class="flex justify-center">
+        <a href="/portfolio/cv-cdcs.pdf" download="cv.pdf">
+            <Button className="content-center bg-blue-950">
+                <Archive/> Descargar CV
+            </Button>
+        </a>
     </div>
 </div>

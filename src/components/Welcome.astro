@@ -5,12 +5,13 @@ import Contacto from "./Contacto.astro";
 import Menu from "./Menu.astro";
 import Experiencia from "./Experiencia.astro";
 import Aboutme from "./Aboutme.astro";
+import {SquareArrowUp} from "lucide-react";
 ---
 
 <div>
     <Menu/>
 
-    <Portada/>
+    <Portada />
 
     <Experiencia/>
 
@@ -19,4 +20,10 @@ import Aboutme from "./Aboutme.astro";
     <Aboutme/>
 
     <Contacto/>
+
+    <div class="sticky bottom-0 flex justify-end p-3">
+        <a href="#inicio" class="bg-zinc-50 p-2 rounded-md">
+            <SquareArrowUp />
+        </a>
+    </div>
 </div>
