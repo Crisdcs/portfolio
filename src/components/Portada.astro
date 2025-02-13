@@ -2,15 +2,17 @@
 import {Button} from "./ui/button";
 import {Archive} from "lucide-react"
 ---
-<div class="bg-blue-900 h-screen grid content-center dark:bg-zinc-800" id="inicio">
+<div class="bg-blue-800 h-screen grid content-center dark:bg-zinc-800" id="inicio">
     <div class="grid sm:grid-cols-3">
         <div class="col-start-1 text-8xl content-center grid justify-end">
             👨🏾‍💻
         </div>
         <div class="col-start-2 col-span-2 sm:w-[550px] w-full p-3 sm:pl-7">
             <div class="content-center">
-                <div class="flex gap-2">
-                    <pre>Hola</pre><div class="text-5xl animate-pulse">👋🏻</div><pre>, bienvenid@</pre>
+                <div class="flex gap-2 justify-center">
+                    <pre class="font-code sm:text-5xl">Hola</pre>
+                    <div class="text-4xl animate-pulse">👋🏻</div>
+                    <pre class="font-code sm:text-5xl">, bienvenid@</pre>
                 </div>
                 <div class="mt-4 mb-4">
                     <p class="text-zinc-50 font-sans">
@@ -31,7 +33,7 @@ import {Archive} from "lucide-react"
     </div>
     <div class="flex justify-center">
         <a href="/portfolio/cv-cdcs.pdf" download="cv.pdf">
-            <Button className="content-center bg-blue-950">
+            <Button className="content-center bg-blue-900">
                 <Archive/> Descargar CV
             </Button>
         </a>

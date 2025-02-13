@@ -63,23 +63,12 @@
     @apply bg-background text-foreground;
   }
   pre {
-    font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
-    font-weight: normal;
-    font-size: 40px;
     background: linear-gradient(14deg, rgba(36, 90, 215, 0.66) 0%, #f8e9e9 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-clip: text;
-    margin: 0;
   }
   li {
-    font-size: 13px;
-    padding: 5px;
-    margin-left: 10px;
-    margin-right: 10px;
-    border-radius: 3px;
     transition: background-color 0.5s;
-    font-family: "Sans Serif Collection", "Helvetica Neue", Helvetica, Arial, serif;
   }
   li:hover{
     background-color: #1e40af;

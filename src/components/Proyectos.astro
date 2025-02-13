@@ -4,23 +4,19 @@ import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} f
 import {Github} from "lucide-react";
 import Almacen from "./Projects/Almacen.astro";
 ---
-<div class="sm:h-full">
-    <div class="bg-blue-900 text-zinc-50 dark:bg-zinc-800 dark:text-zinc-300 text-2xl text-center pt-20 pb-8" id="Proyectos">
+<div class="h-full bg-blue-800 grid justify-center" id="Proyectos">
+    <div class="bg-blue-800 text-zinc-50 dark:bg-zinc-800 dark:text-zinc-300 text-2xl text-center pb-8">
         <p class="animate-pulse font-code">< Proyectos / ></p>
     </div>
-    <div class="bg-blue-900 dark:bg-zinc-800 sm:grid-cols-2 sm:gap-12 p-5 select-none pb-20">
-
-        <div class="sm:grid sm:justify-items-end">
+    <div class="bg-blue-800 dark:bg-zinc-800 grid sm:grid-cols-2 grid-cols-1 sm:gap-12 gap-5 select-none pb-20">
+        <div class="grid sm:justify-items-end">
             <Card>
                 <CardHeader>
                     <CardTitle>Biblioteca</CardTitle>
                 </CardHeader>
                 <CardContent>
-
                     <div class="flex justify-end">
-                        <div class="flex gap-2 w-32 h-40">
-                            <img src="/portfolio/l1.png" alt="" class="h-full rounded-lg"/>
-                        </div>
+                        <img src="/portfolio/l1.png" alt="" class="w-32 h-40 rounded-lg"/>
                     </div>
                 </CardContent>
                 <CardFooter>
@@ -31,7 +27,7 @@ import Almacen from "./Projects/Almacen.astro";
             </Card>
         </div>
 
-        <div class="sm:pt-10 grid sm:justify-items-start">
+        <div class="sm:pt-12 grid sm:justify-items-start">
             <Card>
                 <CardHeader>
                     <CardTitle>Tienda</CardTitle>
@@ -51,22 +47,15 @@ import Almacen from "./Projects/Almacen.astro";
             </Card>
         </div>
 
-        <div class="sm:grid sm:justify-items-end">
+        <div class="grid sm:justify-items-end">
             <Card>
                 <CardHeader>
                     <CardTitle>Login</CardTitle>
                 </CardHeader>
                 <CardContent>
-                    <!--<div class="flex w-full h-16 overflow-y-scroll mb-2 scrollbar-thin scrollbar-thumb-white scrollbar-track-[#172564] dark:scrollbar-thumb-zinc-950 dark:scrollbar-track-zinc-700">-->
-                    <!--    <p class="text-justify pr-3 pl-3 select-none">-->
-                    <!--        Es un sistema básico tipo SPA sin tokens complejos como JWT o OAuth, sin embargo, ofrece protección CSRF,-->
-                    <!--        autenticación de sesión, así como protege contra la fuga de las credenciales de autenticación a través de XSS.-->
-                    <!--        se puede adaptar a cualquier necesidad-->
-                    <!--    </p>-->
-                    <!--</div>-->
                     <div class="flex justify-end">
                         <div class="flex gap-2 w-32 h-40">
-                            <img src="/portfolio/p1.png" alt="" class="h-full"/>
+                            <img src="/portfolio/p1.png" alt="" class="h-full rounded-lg"/>
                         </div>
                     </div>
                 </CardContent>
@@ -78,7 +67,7 @@ import Almacen from "./Projects/Almacen.astro";
             </Card>
         </div>
 
-        <div class="sm:pt-10 grid justify-items-start">
+        <div class="sm:pt-12 grid sm:justify-items-start">
             <Card>
                 <CardHeader>
                     <CardTitle>Open Admin</CardTitle>
