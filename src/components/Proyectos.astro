@@ -1,94 +1,145 @@
 ---
 import {Button} from "@/components/ui/button"
-import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "./ui/card";
-import {Github} from "lucide-react";
-import Almacen from "./Projects/Almacen.astro";
+import {Github, Eye} from "lucide-react";
 ---
-<div class="h-full bg-blue-800 grid justify-center" id="Proyectos">
-    <div class="bg-blue-800 text-zinc-50 dark:bg-zinc-800 dark:text-zinc-300 text-2xl text-center pb-8">
-        <p class="animate-pulse font-code">< Proyectos / ></p>
+<div class="h-full bg-blue-800 dark:bg-zinc-800 grid sm:grid-rows-5 select-none mb-10" id="Proyectos">
+    <div class="row-start-1 text-zinc-50 dark:bg-zinc-800 dark:text-zinc-300 text-2xl grid justify-center content-center sm:pt-7 pt-16 sm:pb-0 pb-8">
+        <div class="animate-pulse font-code">< Proyectos / ></div>
     </div>
-    <div class="bg-blue-800 dark:bg-zinc-800 grid sm:grid-cols-2 grid-cols-1 sm:gap-12 gap-5 select-none pb-20">
-        <div class="grid sm:justify-items-end">
-            <Card>
-                <CardHeader>
-                    <CardTitle>Biblioteca</CardTitle>
-                </CardHeader>
-                <CardContent>
-                    <div class="flex justify-end">
-                        <img src="/portfolio/l1.png" alt="" class="w-32 h-40 rounded-lg"/>
+
+    <div class="row-start-2 row-span-4 grid justify-center sm:grid-cols-2 grid-cols-1 select-none gap-8 pr-5 pl-5">
+
+        <div class="sm:h-72">
+            <div class="grid grid-rows-5 bg-zinc-50 dark:bg-zinc-700 rounded-xl pr-4 pl-4 pt-2 w-full h-60">
+                <div class="row-start-1">
+                    <p class="text-sm text-center font-code pt-2">Almacén de productos</p>
+                </div>
+                <div class="row-start-2 row-span-3 grid grid-cols-3 grid-rows-3">
+                    <div class="col-start-1 col-span-2 row-start-1 row-span-2 p-1">
+                        <p class="text-sm text-zinc-800 dark:text-zinc-50 w-full">
+                            Sistema <span class="text-zinc-950 dark:text-zinc-50 font-bold">Backend</span> de
+                            <span class="text-zinc-950 dark:text-zinc-50 font-bold">micro-servicios</span> hecho con
+                            <span class="text-green-500 font-bold">Spring Boot</span>, contiene autenticación JWT y
+                            autorización, configuración centralizada, circuit breaker, API REST, API Gateway, Spring
+                            Cloud, ...
+                        </p>
                     </div>
-                </CardContent>
-                <CardFooter>
+                    <div class="col-start-1 col-span-2 row-start-3 flex gap-2">
+                        <img src="/portfolio/icons/icons8-spring-boot-120.png" alt="js" class="h-9 w-9 p-1 rounded-md bg-zinc-100 dark:bg-zinc-500"/>
+                        <img src="/portfolio/icons/icons8-mongo-db-96.png" alt="mysql" class="h-9 w-9 p-1 rounded-md bg-zinc-100 dark:bg-zinc-500"/>
+                        <img src="/portfolio/icons/icons8-mysql-120.png" alt="mysql" class="h-9 w-9 p-1 rounded-md bg-zinc-100 dark:bg-zinc-500"/>
+                    </div>
+                    <div class="col-start-3 row-span-3 grid justify-center content-center">
+                        <img src="/portfolio/p1.png" alt="" class="rounded-lg" loading="lazy"/>
+                    </div>
+                </div>
+                <div class="row-start-5">
                     <a href="https://github.com/CristianDCS0/Library_Laravel">
-                        <Button variant='default'> Demo<Github /></Button>
+                        <Button variant='vue'>Repositorio <Github /></Button>
                     </a>
-                </CardFooter>
-            </Card>
+                </div>
+            </div>
         </div>
 
-        <div class="sm:pt-12 grid sm:justify-items-start">
-            <Card>
-                <CardHeader>
-                    <CardTitle>Tienda</CardTitle>
-                </CardHeader>
-                <CardContent>
-                    <div class="flex justify-end">
-                        <div class="flex gap-2 w-32 h-40">
-                            <img src="/portfolio/e1.png" alt="" class="h-full rounded-lg"/>
-                        </div>
+        <div class="sm:h-72 sm:content-end">
+            <div class="grid grid-rows-5 bg-zinc-50 dark:bg-zinc-700 rounded-xl pr-4 pl-4 pt-2 w-full h-60">
+                <div class="row-start-1">
+                    <p class="text-sm text-center font-code pt-2">Tienda</p>
+                </div>
+                <div class="row-start-2 row-span-3 grid grid-cols-3 grid-rows-3">
+                    <div class="col-start-1 col-span-2 row-start-1 row-span-2 p-1">
+                        <p class="text-sm text-zinc-800 dark:text-zinc-50 w-full">
+                            Sistema <span class="text-stone-950 font-bold dark:text-zinc-50">Full Stack</span> de
+                            <span class="text-stone-950 font-bold dark:text-zinc-50">una tienda</span> hecho con
+                            <span class="text-green-500 font-bold">Express JS</span> y
+                            <span class="text-blue-500 font-bold">React JS</span>, contiene autenticación JWT
+                            y autorización, gestión de productos, sistema de carrito de compras, ...
+                        </p>
                     </div>
-                </CardContent>
-                <CardFooter>
+                    <div class="col-start-1 col-span-2 row-start-3 flex gap-2">
+                        <img src="/portfolio/icons/icons8-express-js-120.png" alt="express" class="h-9 w-9 p-1 rounded-md bg-zinc-100 dark:bg-zinc-500"/>
+                        <img src="/portfolio/icons/icons8-react-120.png" alt="react" class="h-9 w-9 p-1 rounded-md bg-zinc-100 dark:bg-zinc-500"/>
+                        <img src="/portfolio/icons/icons8-typescript-120.png" alt="ts" class="h-9 w-9 p-1 rounded-md bg-zinc-100 dark:bg-zinc-500"/>
+                        <img src="/portfolio/icons/icons8-mysql-120.png" alt="mysql" class="h-9 w-9 p-1 rounded-md bg-zinc-100 dark:bg-zinc-500"/>
+                        <img src="/portfolio/icons/icons8-tailwind-css-120.png" alt="tailwind" class="h-9 w-9 p-1 rounded-md bg-zinc-100 dark:bg-zinc-500"/>
+                    </div>
+                    <div class="col-start-3 row-span-3 grid justify-center content-center">
+                        <img src="/portfolio/p1.png" alt="" class="h-24 rounded-lg" loading="lazy"/>
+                    </div>
+                </div>
+                <div class="row-start-5">
                     <a href="https://github.com/CristianDCS0/Library_Laravel">
-                        <Button variant='default'> Demo<Github /></Button>
+                        <Button variant='default'>Demo <Eye /></Button>
                     </a>
-                </CardFooter>
-            </Card>
+                </div>
+            </div>
         </div>
 
-        <div class="grid sm:justify-items-end">
-            <Card>
-                <CardHeader>
-                    <CardTitle>Login</CardTitle>
-                </CardHeader>
-                <CardContent>
-                    <div class="flex justify-end">
-                        <div class="flex gap-2 w-32 h-40">
-                            <img src="/portfolio/p1.png" alt="" class="h-full rounded-lg"/>
-                        </div>
+        <div class="grid sm:h-72">
+            <div class="grid grid-rows-5 bg-zinc-50 dark:bg-zinc-700 rounded-xl pr-4 pl-4 pt-2 w-full h-60">
+                <div class="row-start-1">
+                    <p class="text-sm text-center font-code pt-2">Biblioteca</p>
+                </div>
+                <div class="row-start-2 row-span-3 grid grid-cols-3 grid-rows-3">
+                    <div class="col-start-1 col-span-2 row-start-1 row-span-2 p-1">
+                        <p class="text-sm text-zinc-800 dark:text-zinc-50 w-full">
+                            Sistema <span class="text-stone-950 font-bold dark:text-zinc-50">Full Stack</span> de
+                            <span class="text-stone-950 font-bold dark:text-zinc-50">una biblioteca</span> hecho con
+                            <span class="text-red-500 font-bold">Laravel</span> y
+                            <span class="text-green-500 font-bold">Vue JS</span>, contiene autenticación JWT
+                            y autorización, gestión de libros, sistema de préstamos, ...
+                        </p>
+                        <p class="text-[13px] text-zinc-500 dark:text-zinc-50 w-full">
+                            Credenciales de prueba:<span class="text-zinc-500 font-semibold"> admin_prueba@email.com | admin123</span>
+                        </p>
                     </div>
-                </CardContent>
-                <CardFooter>
-                    <a href="https://github.com/CristianDCS0/Library_Laravel">
-                        <Button variant='default'> Demo<Github /></Button>
+                    <div class="col-start-1 col-span-2 row-start-3 flex gap-2">
+                        <img src="/portfolio/icons/icons8-laravel-96.png" alt="laravel" class="h-9 w-9 p-1 rounded-md bg-zinc-100 dark:bg-zinc-500"/>
+                        <img src="/portfolio/icons/icons8-vue-16.png" alt="vue" class="h-9 w-9 p-2 rounded-md bg-zinc-100 dark:bg-zinc-500"/>
+                        <img src="/portfolio/icons/icons8-typescript-120.png" alt="ts" class="h-9 w-9 p-1 rounded-md bg-zinc-100 dark:bg-zinc-500"/>
+                        <img src="/portfolio/icons/icons8-mysql-120.png" alt="mysql" class="h-9 w-9 p-1 rounded-md bg-zinc-100 dark:bg-zinc-500"/>
+                        <img src="/portfolio/icons/icons8-tailwind-css-120.png" alt="tailwind" class="h-9 w-9 p-1 rounded-md bg-zinc-100 dark:bg-zinc-500"/>
+                    </div>
+                    <div class="col-start-3 row-span-3 grid justify-center content-center">
+                        <img src="/portfolio/projects/l3.png" alt="" class="h-24 rounded-lg" loading="lazy"/>
+                    </div>
+                </div>
+                <div class="row-start-5">
+                    <a href="https://librarvue.vercel.app/" target="_blank">
+                        <Button variant='default'> Demo<Eye /></Button>
                     </a>
-                </CardFooter>
-            </Card>
+                </div>
+            </div>
         </div>
 
-        <div class="sm:pt-12 grid sm:justify-items-start">
-            <Card>
-                <CardHeader>
-                    <CardTitle>Open Admin</CardTitle>
-                </CardHeader>
-                <CardContent>
-                    <div class="flex justify-end">
-                        <div class="flex gap-2 w-32 h-40">
-                            <img src="/portfolio/o1.png" alt="" class="h-full rounded-lg"/>
-                        </div>
+        <div class="grid sm:h-72 sm:content-end">
+            <div class="grid grid-rows-5 bg-zinc-50 dark:bg-zinc-700 rounded-xl pr-4 pl-4 pt-2 w-full h-60">
+                <div class="row-start-1">
+                    <p class="text-sm text-center font-code pt-2">Admin</p>
+                </div>
+                <div class="row-start-2 row-span-3 grid grid-cols-3 grid-rows-3">
+                    <div class="col-start-1 col-span-2 row-start-1 row-span-2 p-1">
+                        <p class="text-sm text-zinc-800 dark:text-zinc-50 w-full">
+                            Sistema <span class="text-stone-950 font-bold dark:text-zinc-50">Backend</span> de
+                            <span class="text-stone-950 font-bold dark:text-zinc-50">administración y roles</span> hecho con
+                            <span class="text-red-500 font-bold">Laravel</span>, gestión de usuarios,
+                            gestión de roles, gestión de permisos, ...
+                        </p>
                     </div>
-                </CardContent>
-                <CardFooter>
-                    <a href="https://github.com/CristianDCS0/Library_Laravel">
-                        <Button variant='default'> Demo<Github /></Button>
+                    <div class="col-start-1 col-span-2 row-start-3 flex gap-2">
+                        <img src="/portfolio/icons/icons8-laravel-96.png" alt="laravel" class="h-9 w-9 p-1 rounded-md bg-zinc-100 dark:bg-zinc-500"/>
+                        <img src="/portfolio/icons/icons8-mysql-120.png" alt="mysql" class="h-9 w-9 p-1 rounded-md bg-zinc-100 dark:bg-zinc-500"/>
+                    </div>
+                    <div class="col-start-3 row-span-3 grid justify-center content-center">
+                        <img src="/portfolio/projects/o3.png" alt="" class="h-24 rounded-lg" loading="lazy"/>
+                    </div>
+                </div>
+                <div class="row-start-5">
+                    <a href="https://github.com/CristianDCS0/LaravelPanel" target="_blank">
+                        <Button variant='laravel'>Repositorio <Github /></Button>
                     </a>
-                </CardFooter>
-            </Card>
-        </div>
-
-        <div class="grid sm:justify-items-end">
-            <Almacen/>
+                </div>
+            </div>
         </div>
     </div>
 </div>

@@ -69,6 +69,7 @@
   }
   li {
     transition: background-color 0.5s;
+    padding: 5px;
   }
   li:hover{
     background-color: #1e40af;
