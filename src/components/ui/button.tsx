@@ -21,7 +21,7 @@ const buttonVariants = cva(
         link: "text-zinc-900 underline-offset-4 hover:underline dark:text-zinc-50",
           laravel: "bg-red-600 hover:bg-red-700 text-white dark:bg-red-700 dark:hover:bg-red-900 dark:text-white",
           vue: "bg-green-500 hover:bg-green-700 text-white dark:bg-green-500 dark:hover:bg-green-700 dark:text-white",
-          typescript: "bg-blue-700 hover:bg-blue-900 text-white dark:bg-blue-700 dark:hover:bg-blue-900 dark:text-white cursor-default",
+          blub: "bg-blue-900 hover:bg-blue-950 text-white dark:bg-zinc-900 dark:hover:bg-zinc-700 dark:text-white cursor-default",
           react: "bg-cyan-600 hover:bg-cyan-900 text-white dark:bg-cyan-600 dark:hover:bg-cyan-900 dark:text-white cursor-default",
           inertia: "bg-purple-600 hover:bg-purple-900 text-white dark:bg-purple-600 dark:hover:bg-purple-900 dark:text-white cursor-default",
       },
