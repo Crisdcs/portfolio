@@ -1,42 +1,37 @@
 ---
 import {ModeToggle} from "./ui/ModeToggle";
 ---
-<div class="sticky top-0 h-12 bg-zinc-50 content-center dark:bg-zinc-800 dark:text-zinc-50 shadow-md shadow-zinc-400/50">
-    <div class="bg-zinc-50 dark:bg-zinc-800 grid sm:grid-cols-4">
-        <div class="col-start-1 grid justify-start ml-5">
-            <p class="sm:grid hidden content-center font-sans text-[13px] select-none text-center">
-                Cristian Cobaxin
-            </p>
-            <div class="sm:hidden grid content-center justify-center">
-                <div>
-                    <img src="/portfolio/ft.jpeg" alt="foto" class="h-10 rounded-full dark:border-2 dark:border-zinc-500"/>
-                </div>
+<div class="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 h-12 flex items-center justify-center px-4 w-[calc(100%-2rem)] sm:w-auto">
+    <div class="bg-zinc-50/95 dark:bg-zinc-800/95 backdrop-blur-sm flex items-center justify-between max-w-3xl w-full rounded-full shadow-md shadow-zinc-400/50 px-3 py-1">
+        <div class="flex items-center space-x-3 mr-3">
+            <div class="sm:hidden">
+                <img src="/portfolio/ft.jpeg" alt="foto" class="h-10 rounded-full dark:border-2 dark:border-zinc-500"/>
             </div>
         </div>
 
-        <div class="col-start-2 col-span-2 grid justify-center content-center">
-            <nav>
-                <ul class="flex list-none font-sans sm:gap-5 gap-3 sm:text-sm text-[10px]">
-                    <li class="dark:hover:bg-zinc-500 dark:hover:text-zinc-900">
+        <div class="flex-1 flex justify-center">
+            <nav aria-label="Navegación principal">
+                <ul class="flex overflow-x-auto list-none font-sans sm:gap-5 gap-3 sm:text-sm text-[10px]">
+                    <li class="menuItem">
                         <a href="#inicio">Inicio</a>
                     </li>
-                    <li class="dark:hover:bg-zinc-500 dark:hover:text-zinc-900">
+                    <li class="menuItem">
                         <a href="#Experiencia">Experiencia</a>
                     </li>
-                    <li class="dark:hover:bg-zinc-500 dark:hover:text-zinc-900">
+                    <li class="menuItem">
                         <a href="#Proyectos">Proyectos</a>
                     </li>
-                    <li class="dark:hover:bg-zinc-500 dark:hover:text-zinc-900">
+                    <li class="menuItem">
                         <a href="#Aboutme">Sobre mí</a>
                     </li>
-                    <li class="dark:hover:bg-zinc-500 dark:hover:text-zinc-900">
+                    <li class="menuItem">
                         <a href="#Contacto">Contacto</a>
                     </li>
                 </ul>
             </nav>
         </div>
 
-        <div class="col-start-4 grid justify-end mr-5">
+        <div class="flex items-center ml-3">
             <ModeToggle client:load />
         </div>
     </div>
