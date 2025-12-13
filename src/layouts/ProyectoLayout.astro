@@ -1,0 +1,15 @@
+---
+export interface Props {
+  content: {
+      title: string;
+      description: string;
+      image: string;
+      technologies: string[];
+      repoUrl?: string;
+      demoUrl?: string;
+  }
+}
+
+---
+
+<slot />
