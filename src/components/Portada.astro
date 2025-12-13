@@ -1,8 +1,11 @@
 ---
 import {Button} from "./ui/button";
 import {Archive} from "lucide-react"
+let year = new Date().getFullYear();
+year=year-2000;
+
 ---
-<div class="h-screen bg-zinc-50 grid justify-center content-center dark:bg-zinc-800 select-none" id="inicio">
+<div class="h-screen bg-zinc-100 grid justify-center content-center dark:bg-zinc-800 select-none" id="inicio">
     <div class="grid sm:grid-cols-2 grid-cols-1 gap-5 sm:w-3/4 mb-0 m-10">
         <div class="sm:col-start-1 sm:grid hidden justify-end content-center">
             <div>
@@ -18,10 +21,10 @@ import {Archive} from "lucide-react"
                 </div>
             </div>
             <div>
-                <p class="text-zinc-900 font-sans sm:text-sm font-semibold dark:text-zinc-50">
+                <p class="text-zinc-900 font-sans sm:text-sm dark:text-zinc-50">
                     Mi nombre es <span class="text-sky-600 font-bold"> Cristian Cobaxin </span>,
-                    soy desarrollador de software. Tengo 25 años de edad. Actualmente estoy en mi
-                    ultimo año de ingeniería en desarrollo de software y redes, busco experiencia laboral.
+                    soy desarrollador de software. Tengo {year} años de edad. Actualmente estoy en mi
+                    ultimo tetramestre de <span class="text-zinc-600 font-bold">Ingeniería en desarrollo de software y redes</span>, busco experiencia laboral.
                     <br/>
                     Desarrollador backend <span class="text-red-600 font-bold">Laravel</span> y <span class="text-green-600 font-bold">Java</span>. Tengo <span class="text-sky-600 font-bold">
                 un año y medio de experiencia laboral</span> más 2 años desarrollando proyectos personales.
@@ -33,7 +36,7 @@ import {Archive} from "lucide-react"
             </div>
         </div>
     </div>
-    <div class="flex justify-center">
+    <div class="flex justify-center animate-bounce">
         <a href="/portfolio/cv.pdf" download="Desarrollador de software.pdf">
             <Button variant='blub' className="rounded-full p-6">
                 <div class="bg-zinc-50 p-2 rounded-full flex gap-2 items-center text-sky-600 hover:bg-sky-600 hover:text-zinc-50 dark:text-zinc-50 dark:bg-zinc-800 transition-colors">

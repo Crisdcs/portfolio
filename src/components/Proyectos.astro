@@ -1,144 +1,25 @@
 ---
-import {Button} from "@/components/ui/button"
-import {Github, Eye} from "lucide-react";
+import CardProyecto from "@/components/ui/CardProyecto.astro";
+const proyectos = await Astro.glob('../components/Projects/*.md');
 ---
-<div class="h-full bg-zinc-50 dark:bg-zinc-800 grid sm:grid-rows-5 select-none mb-10" id="Proyectos">
-    <div class="row-start-1 text-zinc-900 dark:bg-zinc-800 dark:text-zinc-300 text-2xl grid justify-center content-center sm:pt-7 pt-16 sm:pb-0 pb-8">
-        <div class="animate-pulse font-code">< Proyectos / ></div>
+<div class="bg-sky-600/75 dark:text-zinc-200 dark:bg-zinc-700" id="Project">
+    <div class="row-start-1 text-zinc-50 dark:text-zinc-200 text-2xl">
+        <p class="animate-pulse font-code text-center py-20">&lt; Proyectos / &gt;</p>
     </div>
-
-    <div class="row-start-2 row-span-4 grid justify-center sm:grid-cols-2 grid-cols-1 select-none gap-8 pr-5 pl-5">
-
-        <div class="sm:h-72">
-            <div class="grid grid-rows-5 bg-zinc-50 dark:bg-zinc-700 rounded-xl pr-4 pl-4 pt-2 w-full h-60 gap-0">
-                <div class="row-start-1">
-                    <p class="text-sm text-center font-code pt-2">Almacén de productos</p>
-                </div>
-                <div class="row-start-2 row-span-3 grid grid-cols-3 grid-rows-3">
-                    <!-- <div class="col-start-1 col-span-2 row-start-1 row-span-2 pl-3">
-                         <p class="sm:text-sm text-[9px] text-zinc-800 dark:text-zinc-50 w-full">
-                            Sistema <span class="text-zinc-950 dark:text-zinc-50 font-bold">Backend</span> de
-                            <span class="text-zinc-950 dark:text-zinc-50 font-bold">micro-servicios</span> Productos,
-                            Stock y Booking, hecho con
-                            <span class="text-green-500 font-bold">Spring Boot</span>, contiene autenticación JWT y
-                            autorización, Configuración Centralizada, Circuit Breaker, API REST, API Gateway, Spring
-                            Cloud, ...
-                        </p>
-                    </div> -->
-                    <div class="col-start-1 col-span-2 row-start-3 flex gap-2 pl-3">
-                        <img src="/portfolio/icons/icons8-spring-boot-120.png" alt="js" class="h-8 w-8 p-1 rounded-md bg-zinc-100 dark:bg-zinc-500"/>
-                        <img src="/portfolio/icons/icons8-docker-120.png" alt="mysql" class="h-8 w-8 p-1 rounded-md bg-zinc-100 dark:bg-zinc-500"/>
-                        <img src="/portfolio/icons/icons8-mongo-db-96.png" alt="mysql" class="h-8 w-8 p-1 rounded-md bg-zinc-100 dark:bg-zinc-500"/>
-                        <img src="/portfolio/icons/icons8-mysql-120.png" alt="mysql" class="h-8 w-8 p-1 rounded-md bg-zinc-100 dark:bg-zinc-500"/>
+    <div class="pb-20 flex justify-center">
+        <div class="grid grid-flow-row grid-cols-3 gap-5 items-center mx-20">
+            {proyectos.map((proyecto) => (
+                    <div class="rounded-3xl shadow-2xl shadow-zinc-700 w-80 bg-zinc-50 p-1">
+                        <CardProyecto
+                            title={proyecto.frontmatter.title}
+                            description={proyecto.frontmatter.description}
+                            image={proyecto.frontmatter.image}
+                            technologies={proyecto.frontmatter.technologies}
+                            repoUrl={proyecto.frontmatter.repoUrl}
+                            demoUrl={proyecto.frontmatter.demoUrl}
+                        />
                     </div>
-                    <div class="col-start-3 row-span-3 grid justify-center content-center">
-                        <img src="/portfolio/projects/p1.png" alt="" class="rounded-lg" loading="lazy"/>
-                    </div>
-                </div>
-                <div class="row-start-5">
-                    <a href="https://github.com/CristianDCS0/Library_Laravel">
-                        <Button variant='vue'>Repositorio <Github /></Button>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <div class="sm:h-72 sm:content-end">
-            <div class="grid grid-rows-5 bg-zinc-50 dark:bg-zinc-700 rounded-xl pr-4 pl-4 pt-2 w-full h-60">
-                <div class="row-start-1">
-                    <p class="text-sm text-center font-code pt-2">Tienda</p>
-                </div>
-                <div class="row-start-2 row-span-3 grid grid-cols-3 grid-rows-3">
-                    <div class="col-start-1 col-span-2 row-start-1 row-span-2 p-3">
-                        <p class="sm:text-sm text-[10px] text-zinc-800 dark:text-zinc-50 w-full">
-                            Sistema <span class="text-stone-950 font-bold dark:text-zinc-50">Full Stack</span> de
-                            <span class="text-stone-950 font-bold dark:text-zinc-50">una tienda</span> hecho con
-                            <span class="text-green-500 font-bold">Express JS</span> y
-                            <span class="text-blue-500 font-bold">React JS</span>, contiene autenticación JWT
-                            y autorización, gestión de productos, sistema de carrito de compras, ...
-                        </p>
-                    </div>
-                    <div class="col-start-1 col-span-2 row-start-3 flex gap-2 pl-3">
-                        <img src="/portfolio/icons/icons8-express-js-120.png" alt="express" class="h-8 w-8 p-1 rounded-md bg-zinc-100 dark:bg-zinc-500"/>
-                        <img src="/portfolio/icons/icons8-react-120.png" alt="react" class="h-8 w-8 p-1 rounded-md bg-zinc-100 dark:bg-zinc-500"/>
-                        <img src="/portfolio/icons/icons8-typescript-120.png" alt="ts" class="h-8 w-8 p-1 rounded-md bg-zinc-100 dark:bg-zinc-500"/>
-                        <img src="/portfolio/icons/icons8-postgres-120.png" alt="mysql" class="h-8 w-8 p-1 rounded-md bg-zinc-100 dark:bg-zinc-500"/>
-                        <img src="/portfolio/icons/icons8-tailwind-css-120.png" alt="tailwind" class="h-9 w-9 p-1 rounded-md bg-zinc-100 dark:bg-zinc-500"/>
-                    </div>
-                    <div class="col-start-3 row-span-3 grid justify-center content-center">
-                        <img src="/portfolio/projects/p1.png" alt="" class="h-24 rounded-lg" loading="lazy"/>
-                    </div>
-                </div>
-                <div class="row-start-5">
-                    <a href="https://github.com/CristianDCS0/Library_Laravel">
-                        <Button variant='default'>Demo <Eye /></Button>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <div class="grid sm:h-72">
-            <div class="grid grid-rows-5 bg-zinc-50 dark:bg-zinc-700 rounded-xl pr-4 pl-4 pt-2 w-full h-60">
-                <div class="row-start-1">
-                    <p class="text-sm text-center font-code pt-2">Biblioteca</p>
-                </div>
-                <div class="row-start-2 row-span-3 grid grid-cols-3 grid-rows-3">
-                    <div class="col-start-1 col-span-2 row-start-1 row-span-2 p-3">
-                        <p class="sm:text-sm text-[10px] text-zinc-800 dark:text-zinc-50 w-full">
-                            Sistema <span class="text-stone-950 font-bold dark:text-zinc-50">Full Stack</span> de
-                            <span class="text-stone-950 font-bold dark:text-zinc-50">una biblioteca</span> hecho con
-                            <span class="text-red-500 font-bold">Laravel</span> y
-                            <span class="text-green-500 font-bold">Vue JS</span>, contiene autenticación JWT
-                            y autorización, gestión de libros, sistema de préstamos, ...
-                        </p>
-                    </div>
-                    <div class="col-start-1 col-span-2 row-start-3 flex gap-2 pl-3">
-                        <img src="/portfolio/icons/icons8-laravel-96.png" alt="laravel" class="h-8 w-8 p-1 rounded-md bg-zinc-100 dark:bg-zinc-500"/>
-                        <img src="/portfolio/icons/icons8-vue-96.png" alt="vue" class="h-8 w-8 p-1.5 rounded-md bg-zinc-100 dark:bg-zinc-500"/>
-                        <img src="/portfolio/icons/icons8-typescript-120.png" alt="ts" class="h-8 w-8 p-1 rounded-md bg-zinc-100 dark:bg-zinc-500"/>
-                        <img src="/portfolio/icons/icons8-postgres-120.png" alt="mysql" class="h-8 w-8 p-1 rounded-md bg-zinc-100 dark:bg-zinc-500"/>
-                        <img src="/portfolio/icons/icons8-tailwind-css-120.png" alt="tailwind" class="h-8 w-8 p-1 rounded-md bg-zinc-100 dark:bg-zinc-500"/>
-                    </div>
-                    <div class="col-start-3 row-span-3 grid justify-center content-center">
-                        <img src="/portfolio/projects/l3.png" alt="" class="h-24 rounded-lg" loading="lazy"/>
-                    </div>
-                </div>
-                <div class="row-start-5">
-                    <a href="https://library-vue-ashy.vercel.app/" target="_blank">
-                        <Button variant='default'>Demo<Eye /></Button>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <div class="grid sm:h-72 sm:content-end">
-            <div class="grid grid-rows-5 bg-zinc-50 dark:bg-zinc-700 rounded-xl pr-4 pl-4 pt-2 w-full h-60">
-                <div class="row-start-1">
-                    <p class="text-sm text-center font-code pt-2">Admin</p>
-                </div>
-                <div class="row-start-2 row-span-3 grid grid-cols-3 grid-rows-3">
-                    <div class="col-start-1 col-span-2 row-start-1 row-span-2 p-3">
-                        <p class="sm:text-xs text-[10px] text-zinc-800 dark:text-zinc-50 w-full">
-                            Sistema <span class="text-stone-950 font-bold dark:text-zinc-50">Backend</span> de
-                            <span class="text-stone-950 font-bold dark:text-zinc-50">administración y roles</span> hecho con
-                            <span class="text-red-500 font-bold">Laravel</span>, gestión de usuarios,
-                            gestión de roles, gestión de permisos, ...
-                        </p>
-                    </div>
-                    <div class="col-start-1 col-span-2 row-start-3 flex gap-2">
-                        <img src="/portfolio/icons/icons8-laravel-96.png" alt="laravel" class="h-9 w-9 p-1 rounded-md bg-zinc-100 dark:bg-zinc-500"/>
-                        <img src="/portfolio/icons/icons8-mysql-120.png" alt="mysql" class="h-9 w-9 p-1 rounded-md bg-zinc-100 dark:bg-zinc-500"/>
-                    </div>
-                    <div class="col-start-3 row-span-3 grid justify-center content-center">
-                        <img src="/portfolio/projects/o3.png" alt="" class="h-24 rounded-lg" loading="lazy"/>
-                    </div>
-                </div>
-                <div class="row-start-5">
-                    <a href="https://github.com/CristianDCS0/LaravelPanel" target="_blank">
-                        <Button variant='laravel'>Repositorio <Github /></Button>
-                    </a>
-                </div>
-            </div>
+            ))}
         </div>
     </div>
 </div>

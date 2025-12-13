@@ -1,11 +1,11 @@
 ---
-import Proyectos from "./Proyectos.astro";
 import Portada from "./Portada.astro";
 import Contacto from "./Contacto.astro";
 import Menu from "./Menu.astro";
 import Experiencia from "./Experiencia.astro";
-import Aboutme from "./Aboutme.astro";
-import {ArrowUp} from "lucide-react";
+import Proyectos from "./Proyectos.astro";
+import About from "./Aboutme.astro";
+import Habilidades from "./Habilidades.astro";
 ---
 
 <div>
@@ -13,19 +13,13 @@ import {ArrowUp} from "lucide-react";
 
     <Portada />
 
-    <Experiencia/>
+    <About />
+
+    <Experiencia />
 
     <Proyectos />
 
-    <Aboutme/>
+    <Habilidades />
 
     <Contacto/>
-
-    <div class="sticky bottom-0 w-fit content-center">
-        <div class="bg-zinc-50/70 dark:bg-zinc-800/50 p-2 rounded-md m-3">
-            <a href="#inicio">
-                <ArrowUp />
-            </a>
-        </div>
-    </div>
 </div>

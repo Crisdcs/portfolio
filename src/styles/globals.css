@@ -77,22 +77,26 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-  li {
-    transition: background-color 0.5s;
+
+  li{
     padding: 5px;
   }
+
   li:hover{
-    background-color: #1e40af;
-    border-radius: 3px;
-    transition: background-color .7s;
-    color: white;
-  }
-  .menuItem:hover {
     background: rgba(2, 132, 199, 0.51);
     color: white;
+    border-radius: 10px;
+    transition: background-color .5s;
   }
+
   .dark .menuItem:hover{
     background: #71717a;
     color: black;
+  }
+
+  iframe {
+    border-radius: 10px;
+    margin-bottom: 50px;
+    width: 100%;
   }
 }
