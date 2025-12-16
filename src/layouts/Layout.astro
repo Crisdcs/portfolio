@@ -1,17 +1,16 @@
 ---
-import '@/styles/globals.css'
+import '../styles/globals.css';
 ---
 
 <!doctype html>
-<html lang="en" class="scrollbar-thin scrollbar-thumb-white scrollbar-track-blue-950/40">
+<html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 		<meta name="generator" content={Astro.generator} />
 		<title>Portfolio | Cristian Cobaxin</title>
 	</head>
-	<body class="dark:bg-zinc-900 dark:text-zinc-200 transition-colors duration-500 font-sans">
+	<body class="font-sans">
 		<script is:inline>
 			const getThemePreference = () => {
 				if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
