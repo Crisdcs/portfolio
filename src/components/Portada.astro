@@ -5,9 +5,19 @@ let year = new Date().getFullYear();
 year=year-2000;
 
 ---
-<div class="h-screen" id="inicio">
-
-    <div class="h-60 w-60 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-no-repeat bg-center bg-cover rounded-2xl">
+<div class="pageTheme pageDark relative" id="inicio">
+    <div class="h-screen bg-cover bg-center">
+        <img src="/portfolio/ptd.svg" alt=""  class="h-screen"/>
     </div>
-    <p class="font-code p-20 text-zinc-700 dark:text-zinc-700 text-4xl font-bold w-80">Desarrollador backend</p>
+
+    <div class="absolute left-1/2 -translate-x-1/2 bottom-20 z-20 animate-bounce md:relative md:left-auto md:bottom-auto md:translate-x-72 md:-translate-y-30">
+        <a href="/portfolio/cv.pdf" download="Desarrollador de software.pdf">
+            <Button variant='blub' className="rounded-full p-6 w-48 h-16">
+                <div class="bg-zinc-50 p-2 rounded-full flex gap-2 items-center text-sky-600 hover:bg-sky-600 hover:text-zinc-50 dark:text-zinc-50 dark:bg-zinc-800 transition-colors">
+                    <Archive/>
+                </div>
+                Descargar CV
+            </Button>
+        </a>
+    </div>
 </div>
