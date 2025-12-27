@@ -192,6 +192,12 @@
       padding: 20px 20px 0 20px;
       width: 100%;
     }
+    @media (min-width: 428px) {
+      .txt-cont{
+        font-size: 18px;
+        padding: 40px 50px 0 50px;
+      }
+    }
     @media (min-width: 768px) {
       .txt-cont{
         padding: 80px 100px 0 100px;
