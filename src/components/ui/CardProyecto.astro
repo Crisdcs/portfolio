@@ -11,31 +11,29 @@ export interface Props {
 }
 const { title, description, image, technologies, repoUrl, demoUrl } = Astro.props;
 ---
-<div>
-        <div class="bg-cover rounded-3xl h-60 relative overflow-hidden" style={`background-image: url(${image})`}>
-                <div class="absolute inset-0 flex flex-col justify-center items-center gap-1 p-1 text-zinc-50 bg-zinc-700 bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300">
-                        <div>
-                                <h3 class="text-2xl font-bold text-center">{title}</h3>
-                                <p class="text-sm text-center">{description}</p>
-                        </div>
-
-                        <div class="flex justify-center">
-                                {technologies.map((tech) => (
-                                    <img src={tech} class="p-1 bg-zinc-200 rounded-full w-8" />
-                                ))}
-                        </div>
-                        <div>
-                                {repoUrl && (
-                                    <a href={repoUrl} target="_blank">
-                                            <Button variant='default'>Repo <FolderGit2 /></Button>
-                                    </a>
-                                )}
-                                {demoUrl && (
-                                    <a href={demoUrl} target="_blank">
-                                            <Button variant='default'>Demo <Eye /></Button>
-                                    </a>
-                                )}
-                        </div>
-                </div>
+<div class="grid grid-flow-row gap-2 p-1 lg:h-100 sm:h-100 md:h-100 w-96">
+        <div class="">
+                <img src={image} alt={title} class="rounded-2xl h-40 w-full"/>
+        </div>
+        <div class="pl-2">
+                <h3 class="text-2xl font-semibold">{title}</h3>
+                <p>{description}</p>
+        </div>
+        <div class="flex gap-1 pl-2">
+                {technologies.map((tech) => (
+                    <img src={tech} class="bg-zinc-200 rounded-full size-10 p-1"  alt={title} />
+                ))}
+        </div>
+        <div class="pl-2">
+                {repoUrl && (
+                    <a href={repoUrl} target="_blank">
+                            <Button variant='default'>Repo <FolderGit2 /></Button>
+                    </a>
+                )}
+                {demoUrl && (
+                    <a href={demoUrl} target="_blank">
+                            <Button variant='default'>Demo <Eye /></Button>
+                    </a>
+                )}
         </div>
 </div>

@@ -144,13 +144,13 @@
       width: 100%;
     }
 
-    .pageTheme{
+    .pageTheme {
       justify-content: center;
       height: 100vh;
     }
 
     .pageTheme.pageLight{
-      background: linear-gradient(180deg, rgb(0, 169, 205) 0%, rgb(0, 115, 184) 100%);
+      background: linear-gradient(180deg, rgb(0, 169, 205) 0%, rgb(0, 135, 184) 100%);
     }
     .dark .pageLight{
       background: linear-gradient(180deg, rgba(244, 244, 245, 1));
@@ -160,7 +160,7 @@
       background-color: #f4f4f5;
     }
     .dark .pageDark {
-      background: linear-gradient(180deg, rgb(124, 124, 124) 0%, rgb(64, 64, 64) 100%);
+      background: linear-gradient(180deg, rgb(50, 49, 49) 0%, rgb(40, 40, 40) 100%);
     }
 
     .titleTheme {
@@ -170,6 +170,7 @@
       font-size: 36px;
       padding-block: calc(var(--spacing) * 20);
       animation: pulse 3.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+      user-select: none;
     }
 
     .titleTheme.titleDark{
@@ -184,27 +185,30 @@
     .dark .titleLight{
       color: #3f3f46;
     }
-    .txt-cont{
+    .txt-cont {
       text-wrap: wrap;
       justify-content: center;
-      font-size: 22px;
       font-family: calc(var(--font-sans)), sans-serif;
-      padding: 20px 20px 0 20px;
       width: 100%;
+      user-select: none;
     }
-    @media (min-width: 428px) {
-      .txt-cont{
-        font-size: 18px;
-        padding: 40px 50px 0 50px;
+
+    @media (max-width: 767px) {
+      .txt-cont {
+        font-size: 16px;
+        padding: 20px 20px 0 20px;
       }
     }
+
     @media (min-width: 768px) {
-      .txt-cont{
+      .txt-cont {
+        font-size: 22px;
         padding: 80px 100px 0 100px;
       }
     }
+
     @media (min-width: 1024px) {
-      .txt-cont{
+      .txt-cont {
         padding: 80px 280px 0 280px;
       }
     }

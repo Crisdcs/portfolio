@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/ProyectoLayout.astro
-title: 'Bliblioteca'
+title: 'Biblioteca'
 description: 
   "Proyecto de sistema de gestión de almacenes Sistema Backend de micro-servicios"
 image: '/portfolio/projects/l3.png'
