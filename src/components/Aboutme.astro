@@ -1,14 +1,21 @@
 ---
 let year = new Date().getFullYear();
-year=year-2000;
+let month = new Date().getMonth() + 1;
+if((month>=6) && (month<=12)) {
+    year=year-2000;
+}
+if((month>=0) && (month<=5)){
+    year=year-2001;
+}
+
 ---
-<div class="pageTheme pageLight" id="Aboutme">
+<div class="h-screen" id="Aboutme">
     <p class="titleTheme titleLight">&lt; Más sobre mí / &gt;</p>
     <p class="txt-cont txt-light">
         Me llamo Cristian David Cobaxin Seba, tengo {year} años, soy originario de Veracruz, vivo en Guadalupe,
         Nuevo León, actualmente estoy en mi último tetramestre de ingeniería, concluyo en febrero 2026.
         <br/><br/>
-        Me considero una persona responsable y tranquila, con buenas relaciones interpersonales y una gran capacidad
+        Me considero una persona responsable, tranquilo, con buenas relaciones interpersonales y una gran capacidad
         de adaptación a los cambios. Me gusta trabajar en equipo y colaborar con otras personas. Me gusta mantener un
         equilibrio entre mi vida personal y profesional. Creo que es importante tener tiempo para relajarse y disfrutar
         de las cosas que me gustan.

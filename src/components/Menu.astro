@@ -1,38 +1,31 @@
 ---
-import {ModeToggle} from "@/components/ui/ModeToggle";
 ---
-<div class="fixed top-1 left-1/2 -translate-x-1/2 h-20 w-fit max-w-[90vw] z-50">
-    <div class="bg-zinc-50/70 dark:bg-zinc-800/95 backdrop-blur-sm flex sm:justify-items-center rounded-full shadow-md shadow-zinc-400/5 p-1">
-        <div>
-            <nav aria-label="Navegación principal">
-                <ul class="flex overflow-x-auto list-none font-sans sm:gap-1 gap-3 px-2 whitespace-nowrap">
-                    <li class="menuItem">
-                        <a href="#inicio">Inicio</a>
-                    </li>
-                    <li class="menuItem">
+<div>
+    <header>
+        <div class="container">
+            <nav>
+                <ul class="nav-links">
+                    <li>
                         <a href="#Aboutme">Sobre mí</a>
                     </li>
-                    <li class="menuItem">
+                    <li>
                         <a href="#Experiencia">Experiencia</a>
                     </li>
-                    <li class="menuItem">
+                    <li>
                         <a href="#Project">Proyectos</a>
                     </li>
-                    <li class="menuItem">
+                    <li>
                         <a href="#historial">Historial</a>
                     </li>
-                    <li class="menuItem">
+                    <li>
                         <a href="#habilidades">Habilidades</a>
                     </li>
-                    <li class="menuItem">
+                    <li>
                         <a href="#Contacto">Contacto</a>
                     </li>
                 </ul>
             </nav>
         </div>
-
-        <div class="flex items-center">
-            <ModeToggle client:load />
-        </div>
-    </div>
+    </header>
 </div>
+

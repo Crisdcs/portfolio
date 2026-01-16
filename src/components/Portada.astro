@@ -1,8 +1,7 @@
 ---
-import {Button} from "./ui/button";
 import {Archive} from "lucide-react"
 ---
-<div class="pageTheme pageDark content-center" id="inicio">
+<div class="content-center" id="inicio">
 
     <div class="flex justify-center">
         <img src="/portfolio/ptd.svg" alt="" class="h-screen bg-cover bg-center"/>
@@ -10,12 +9,10 @@ import {Archive} from "lucide-react"
 
     <div class="absolute left-1/2 -translate-x-1/2 -translate-y-60 z-20 animate-bounce md:relative md:left-auto md:bottom-auto md:translate-x-96 md:-translate-y-40">
         <a href="/portfolio/cv.pdf" download="Desarrollador de software.pdf">
-            <Button variant='blub' className="rounded-full p-6 w-48 h-16">
-                <div class="bg-zinc-50 p-2 rounded-full flex gap-2 items-center text-sky-600 hover:bg-sky-600 hover:text-zinc-50 dark:text-zinc-50 dark:bg-zinc-800 transition-colors">
+            <button class="rounded-full p-6 w-48 h-16 flex gap-2 hover:border-zinc-200 hover:border-2 justify-center items-center">
                     <Archive/>
-                </div>
                 Descargar CV
-            </Button>
+            </button>
         </a>
     </div>
 </div>
