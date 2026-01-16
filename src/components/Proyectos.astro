@@ -3,7 +3,7 @@ import CardProyecto from "@/components/ui/CardProyecto.astro";
 const proyectos = await Astro.glob('../components/Projects/*.md');
 ---
 <!-- para agregar más proyectos y que se acople al contenido quitar h-screen o 100vh -->
-<div class="pageTheme h-screen" id="Project">
+<div class="pageTheme" id="Project">
     <p class="titleTheme">&lt; Proyectos / &gt;</p>
     <div class="flex justify-center">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mx-10 pb-20">

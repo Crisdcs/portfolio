@@ -134,9 +134,10 @@
       .txt-cont {
         padding: 80px 280px 0 280px;
       }
+        .menu { display: none; }
     }
     @media (max-width: 768px) {
-        .container { display: none; }
+        .menu { display: none; }
     }
     .history {
       background: linear-gradient(180deg, rgb(0, 169, 205) 0%, rgb(0, 115, 184) 100%);
