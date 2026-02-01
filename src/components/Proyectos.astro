@@ -3,23 +3,23 @@ import CardProyecto from "@/components/ui/CardProyecto.astro";
 const proyectos = await Astro.glob('../components/Projects/*.md');
 ---
 <!-- para agregar más proyectos y que se acople al contenido quitar h-screen o 100vh -->
-<div class="pageTheme" id="Project">
+<div class="sm:pageTheme" id="Project">
     <p class="titleTheme">&lt; Proyectos / &gt;</p>
     <div class="flex justify-center">
-        <div class="grid grid-cols-3 gap-10 mx-10 pb-20">
+        <div class="grid grid-cols-1 gap-5 sm:gap-10 mx-2 sm:mx-10 pb-20 sm:grid-cols-3">
             {
                 proyectos.map((proyecto) => (
-                    <div class="rounded-3xl hover:shadow-2xl hover:shadow-zinc-700 bg-[#0F172ABF] p-2 text-zinc-200 hover:border-cyan-600 hover:border-2 transition-shadow duration-200 ease-in-out">
-                        <CardProyecto
-                            title={proyecto.frontmatter.title}
-                            description={proyecto.frontmatter.description}
-                            image={proyecto.frontmatter.image}
-                            technologies={proyecto.frontmatter.technologies}
-                            repoUrl={proyecto.frontmatter.repoUrl}
-                            demoUrl={proyecto.frontmatter.demoUrl}
-                        />
-                    </div>
-            ))}
+                        <div class="rounded-3xl hover:shadow-2xl hover:shadow-zinc-600 bg-[#0F172ABF] text-zinc-200 transition-shadow duration-200 ease-in-out">
+                            <CardProyecto
+                                    title={proyecto.frontmatter.title}
+                                    description={proyecto.frontmatter.description}
+                                    image={proyecto.frontmatter.image}
+                                    technologies={proyecto.frontmatter.technologies}
+                                    repoUrl={proyecto.frontmatter.repoUrl}
+                                    demoUrl={proyecto.frontmatter.demoUrl}
+                            />
+                        </div>
+                ))}
         </div>
     </div>
 </div>

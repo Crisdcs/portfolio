@@ -17,130 +17,163 @@
 
 /* Animación suave del fondo */
 @keyframes gradient {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
-    /* --- 2. ESTILOS GENERALES (GLASSMORPHISM) --- */
-    :root {
-        /* Colores ajustados para funcionar sobre el fondo colorido */
-        --glass-bg: rgba(15, 23, 42, 0.75); /* Oscuro translúcido */
-        --glass-border: rgba(255, 255, 255, 0.1);
-        --text-primary: #f8fafc;
-        --text-secondary: #cbd5e1; /* Un poco más claro para contraste */
-        --accent: #38bdf8;
-        --accent-hover: #0ea5e9;
+/* --- 2. ESTILOS GENERALES (GLASSMORPHISM) --- */
+:root {
+    /* Colores ajustados para funcionar sobre el fondo colorido */
+    --glass-bg: rgba(15, 23, 42, 0.75); /* Oscuro translúcido */
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --text-primary: #f8fafc;
+    --text-secondary: #cbd5e1; /* Un poco más claro para contraste */
+    --accent: #38bdf8;
+    --accent-hover: #0ea5e9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    color: var(--text-primary);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Utilidades */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s;
+}
+
+ul {
+    list-style: none;
+}
+
+/* --- 3. COMPONENTES ESTILIZADOS --- */
+
+/* Header Glass */
+header {
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    /* Efecto vidrio esmerilado */
+    background: rgba(15, 23, 42, 0.3);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    z-index: 1000;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent);
+    text-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
+}
+
+.logo span {
+    color: var(--text-primary);
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+    text-shadow: 0 0 8px var(--accent);
+}
+
+iframe {
+    border-radius: 10px;
+    margin-bottom: 50px;
+    width: 100%;
+}
+
+.pageTheme {
+    justify-content: center;
+    height: 100vh;
+}
+
+.titleTheme {
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 36px;
+    padding-block: calc(var(--spacing) * 20);
+    animation: pulse 3.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    user-select: none;
+    color: #e4e4e7;
+}
+
+.txt-cont {
+    text-wrap: wrap;
+    justify-content: center;
+    font-family: calc(var(--font-sans)), sans-serif;
+    width: 100%;
+    user-select: none;
+    color: #e4e4e7;
+}
+
+@media (min-width: 350px) {
+    .txt-cont {
+        padding: 0 10px 0 10px;
     }
 
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: 'Inter', sans-serif;
-    }
-
-    body {
-        color: var(--text-primary);
-        line-height: 1.6;
-        overflow-x: hidden;
-    }
-
-    /* Utilidades */
-    .container {
-        max-width: 1100px;
-        margin: 0 auto;
-        padding: 0 20px;
-    }
-
-    a { text-decoration: none; color: inherit; transition: 0.3s; }
-    ul { list-style: none; }
-
-    /* --- 3. COMPONENTES ESTILIZADOS --- */
-
-    /* Header Glass */
-    header {
-        padding: 20px 0;
-        position: fixed;
-        width: 100%;
-        top: 0;
-        /* Efecto vidrio esmerilado */
-        background: rgba(15, 23, 42, 0.3);
-        backdrop-filter: blur(15px);
-        -webkit-backdrop-filter: blur(15px);
-        z-index: 1000;
-        border-bottom: 1px solid var(--glass-border);
-    }
-
-    nav {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .logo { font-size: 1.5rem; font-weight: 700; color: var(--accent); text-shadow: 0 0 10px rgba(56, 189, 248, 0.5); }
-    .logo span { color: var(--text-primary); }
-
-    .nav-links { display: flex; gap: 30px; }
-    .nav-links a { font-weight: 500; }
-    .nav-links a:hover { color: var(--accent); text-shadow: 0 0 8px var(--accent); }
-
-    iframe {
-      border-radius: 10px;
-      margin-bottom: 50px;
-      width: 100%;
+    .menu {
+        display: none;
     }
 
     .pageTheme {
-      justify-content: center;
-      height: 100vh;
+        justify-content: center;
     }
+}
 
-    .titleTheme {
-      text-align: center;
-      font-family: sans-serif;
-      font-weight: bold;
-      font-size: 36px;
-      padding-block: calc(var(--spacing) * 20);
-      animation: pulse 3.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-      user-select: none;
-        color: #e4e4e7;
-    }
-
+@media (min-width: 680px) {
     .txt-cont {
-      text-wrap: wrap;
-      justify-content: center;
-      font-family: calc(var(--font-sans)), sans-serif;
-      width: 100%;
-      user-select: none;
-        color: #e4e4e7;
+        padding: 80px 130px 0 130px;
     }
+}
 
-    @media (min-width: 350px) {
-      .txt-cont {
-        padding: 0 10px 0 10px;
-      }
-      .menu {
-        display: none;
-      }
-        .pageTheme {
-            justify-content: center;
-            height: 100vh;
-        }
+@media (min-width: 1024px) {
+    .txt-cont {
+        font-size: 20px;
+        padding: 80px 150px 0 120px;
     }
+}
 
-    @media (min-width: 680px) {
-      .txt-cont {
-        padding: 80px 100px 0 100px;
-      }
-    }
-
-    @media (min-width: 1024px) {
-      .txt-cont {
-        padding: 80px 100px 0 100px;
-      }
-    }
-
-    .history {
-      background: linear-gradient(180deg, rgb(0, 169, 205) 0%, rgb(0, 115, 184) 100%);
-    }
+.history {
+    background: linear-gradient(180deg, rgb(0, 169, 205) 0%, rgb(0, 115, 184) 100%);
+}
