@@ -116,11 +116,17 @@
         color: #e4e4e7;
     }
 
-    @media (max-width: 480px) {
+    @media (min-width: 350px) {
       .txt-cont {
-        font-size: 14px;
-        padding: 20px 280px 0 280px;
+        padding: 0 10px 0 10px;
       }
+      .menu {
+        display: none;
+      }
+        .pageTheme {
+            justify-content: center;
+            height: 100vh;
+        }
     }
 
     @media (min-width: 680px) {
